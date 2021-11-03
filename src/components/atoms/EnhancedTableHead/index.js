@@ -1,11 +1,11 @@
-import { TableHead, TableRow, TableCell, Checkbox } from '@mui/material';
-import styles from './styles.module.css';
+import { TableHead, TableRow, TableCell, Checkbox } from "@mui/material";
+import styles from "./styles.module.css";
 
 export default function EnhancedTableHead({
   headCells,
   onSelectAllClick,
   numSelected,
-  rowCount
+  rowCount,
 }) {
   return (
     <TableHead data-testid='Enha_tble_head' className={styles.tableHead}>
@@ -17,14 +17,14 @@ export default function EnhancedTableHead({
             checked={rowCount > 0 && numSelected === rowCount}
             onChange={onSelectAllClick}
             inputProps={{
-              'aria-label': 'select all desserts'
+              "aria-label": "select all desserts",
             }}
           />
         </TableCell>
-        {headCells.map(headCell => (
+        {headCells.map((headCell, index) => (
           <TableCell
             key={headCell.id}
-            align={headCell.numeric ? 'right' : 'left'}
+            align={headCell.numeric ? "right" : "left"}
             style={headCell.width ? { minWidth: headCell.width } : {}}
           >
             {headCell.label}

@@ -16,7 +16,7 @@ export default function CustomizeTable(props) {
   // side Effects
   useEffect(() => {
     dispatch(getPhotosAction(1));
-  }, []);
+  }, [dispatch]);
 
   const handleSelectAllClick = event => {
     if (event.target.checked) {

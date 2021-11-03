@@ -1,16 +1,16 @@
-import { useState } from 'react';
-import { TableContainer } from '@mui/material';
-import { useDispatch, useSelector } from 'react-redux';
-import { Spinner } from '../../atoms';
-import { CustomizeTable } from '../../molecules';
-import getPhotosAction from '../../../redux/actions/getPhotosAction';
-import InfiniteScroll from 'react-infinite-scroll-component';
-import styles from './styles.module.css';
+import { useState } from "react";
+import { TableContainer } from "@mui/material";
+import { useDispatch, useSelector } from "react-redux";
+import { Spinner } from "../../atoms";
+import { CustomizeTable } from "../../molecules";
+import getPhotosAction from "../../../redux/actions/getPhotosAction";
+import InfiniteScroll from "react-infinite-scroll-component";
+import styles from "./styles.module.css";
 
 export default function DataTable({ columns }) {
   const [page, setPage] = useState(1);
   const [hasMore, setHasMore] = useState(true);
-  const { photos, error } = useSelector(state => state.PhotosReducer);
+  const { photos, error } = useSelector((state) => state.PhotosReducer);
 
   const dispatch = useDispatch();
 

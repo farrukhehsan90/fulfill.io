@@ -1,6 +1,6 @@
-import axios from 'axios';
+import axios from "axios";
 
 // base axios instance
 export default axios.create({
-  baseURL: `https://jsonplaceholder.typicode.com`
+  baseURL: process.env.REACT_APP_API,
 });
