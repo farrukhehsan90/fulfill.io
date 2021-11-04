@@ -30,8 +30,7 @@ In the FULLFUL.IO Directory, you can run:
 
 ### `yarn test`
 
-Launches the test runner in the Terminal.
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Launches the test runner in the Terminal.it uses Jest/enzyme tests.
 
 
 ### Build 
