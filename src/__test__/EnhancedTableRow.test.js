@@ -16,7 +16,7 @@ const headData = [
   {
     id: 'albumId',
     numeric: true,
-    label: 'Ablum Id'
+    label: 'Album Id'
   }
 ];
 
